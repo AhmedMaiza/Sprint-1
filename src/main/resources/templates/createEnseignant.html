@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="template">
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<head>
+<meta charset="utf-8">
+<title>Ajout des Enseignants</title>
+</head>
+<body>
+	<div layout:fragment="Mycontent">
+		<div class="container mt-5">
+			<div class="card">
+				<div class="card-header">Ajout des Enseignants</div>
+				<div class="card-body">
+					<form th:action="@{saveEnseignant}" method="post">
+						<div class="form-group">
+							<label class="control-label">Nom Enseignant :</label> <input
+								type="text" name="nomEnseignant" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label class="control-label">Salaire Enseignant :</label> <input
+								type="text" name="salaireEnseignant" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label class="control-label">date d'embauche :</label> <input
+								type="date" name="dateEmbauche" class="form-control" />
+						</div>
+						<div>
+							<button type="submit" class="btn btn-primary">Valider</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
